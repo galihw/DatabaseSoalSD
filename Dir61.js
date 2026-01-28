@@ -1146,22 +1146,37 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 0+230, -3,base1_image.width, base1_image.height);
-				ctx.drawImage(base1_image, 0+250, 37,base1_image.width, base1_image.height);
+				var len1 = ss1.length*7.5;
+				var len2 = ss3.length*7.5;
+				//ctx.drawImage(base1_image, 0+230, -3,base1_image.width, base1_image.height);
+				//ctx.drawImage(base1_image, 0+250, 37,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len1, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len2, 37,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[0],10+230,22);
 				ctx.fillText(arrs[1],27+230,12);
 				ctx.fillText(arrs[2],27+230,32);
 				ctx.fillText(arrs[3],8+250,62);
 				ctx.fillText(arrs[4],27+250,52);
 				ctx.fillText(arrs[5],27+250,72);
+				*/
+				ctx.fillText(arrs[0],10+len1,22);
+				ctx.fillText(arrs[1],27+len1,12);
+				ctx.fillText(arrs[2],27+len1,32);
+				ctx.fillText(arrs[3],8+len2,62);
+				ctx.fillText(arrs[4],27+len2,52);
+				ctx.fillText(arrs[5],27+len2,72);
+				
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,280,20);
+				//ctx.fillText(ss2,280,20);
+				ctx.fillText(ss2,len1+60,20);
 				ctx.fillText(ss3,0,60);
-				ctx.fillText(ss4,300,60);
+				//ctx.fillText(ss4,300,60);
+				ctx.fillText(ss4,len2+60,60);
 			}
 		}
 		
@@ -1214,22 +1229,37 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 403-280, -3,base1_image.width, base1_image.height);
-				ctx.drawImage(base1_image, 403-130, 37,base1_image.width, base1_image.height);
+				var len1 = ss1.length*7.5;
+				var len2 = ss3.length*7.5;
+				//ctx.drawImage(base1_image, 403-280, -3,base1_image.width, base1_image.height);
+				//ctx.drawImage(base1_image, 403-130, 37,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len1, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len2, 37,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[0],410-280,22);
 				ctx.fillText(arrs[1],430-280,12);
 				ctx.fillText(arrs[2],430-280,32);
 				ctx.fillText(arrs[3],410-130,62);
 				ctx.fillText(arrs[4],430-130,52);
 				ctx.fillText(arrs[5],430-130,72);
+				*/
+				ctx.fillText(arrs[0],len1+7,22);
+				ctx.fillText(arrs[1],len1+27,12);
+				ctx.fillText(arrs[2],len1+27,32);
+				ctx.fillText(arrs[3],len2+7,62);
+				ctx.fillText(arrs[4],len2+27,52);
+				ctx.fillText(arrs[5],len2+27,72);
+				
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,450-280,20);
+				//ctx.fillText(ss2,450-280,20);
+				ctx.fillText(ss2,len1+47,20);
 				ctx.fillText(ss3,0,60);
-				ctx.fillText(ss4,450-130,60);
+				//ctx.fillText(ss4,450-130,60);
+				ctx.fillText(ss4,len2+47,60);
 			}
 		}
 		
@@ -1248,16 +1278,26 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 403, -3,base1_image.width, base1_image.height);
+				var len = ss1.length*6.7;
+				console.log(len)
+				//ctx.drawImage(base1_image, 403, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[1],410,22);
 				ctx.fillText(arrs[2],430,12);
 				ctx.fillText(arrs[3],430,32);
+				*/
+				ctx.fillText(arrs[1],len+7,22);
+				ctx.fillText(arrs[2],len+27,12);
+				ctx.fillText(arrs[3],len+27,32);
+				
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,450,20);
+				//ctx.fillText(ss2,450,20);
+				ctx.fillText(ss2,len+60,20);
 			}
 		}
 		
@@ -1276,17 +1316,26 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
+				var len = ss1.length*8;
+				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[0],75,22);
 				ctx.fillText(arrs[1],95,12);
 				ctx.fillText(arrs[2],95,32);
 				ctx.fillText(arrs[3]+"%",140,22);
+				*/
+				ctx.fillText(arrs[0],len+5,22);
+				ctx.fillText(arrs[1],len+25,12);
+				ctx.fillText(arrs[2],len+25,32);
+				ctx.fillText(arrs[3]+"%",len+70,22);
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,170,20);
+				//ctx.fillText(ss2,170,20);
+				ctx.fillText(ss2,len+100,20);
 			}
 		}
 		
@@ -1372,16 +1421,25 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
+				var len = ss1.length*8;
+				//ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[0],171,22);
 				ctx.fillText(arrs[1],214,12);
 				ctx.fillText(arrs[2],214,32);
+				*/
+				ctx.fillText(arrs[0],len+11,22);
+				ctx.fillText(arrs[1],len+54,12);
+				ctx.fillText(arrs[2],len+54,32);
+				
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,230,20);
+				//ctx.fillText(ss2,230,20);
+				ctx.fillText(ss2,len+80,20);
 			}
 		}
 		
@@ -1400,9 +1458,12 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
+				var len = ss1.length*8;
+				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len-10, -3,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[1],80,12);
 				ctx.fillText(arrs[2],80,32);
 				
@@ -1412,10 +1473,22 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				
 				ctx.fillText(arrs[7],170,12);
 				ctx.fillText(arrs[8],170,32);
+				*/
+				ctx.fillText(arrs[1],len,12);
+				ctx.fillText(arrs[2],len,32);
+				
+				ctx.fillText(arrs[3],len+35,22);
+				ctx.fillText(arrs[4],len+55,12);
+				ctx.fillText(arrs[5],len+55,32);
+				
+				ctx.fillText(arrs[7],len+90,12);
+				ctx.fillText(arrs[8],len+90,32);
+				
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,190,20);
+				//ctx.fillText(ss2,190,20);
+				ctx.fillText(ss2,len+120,20);
 			}
 		}
 		
@@ -1474,17 +1547,26 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
+				var len = ss1.length*8;
+				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len-5, -3,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[0],80,22);
 				ctx.fillText(arrs[1],95,12);
 				ctx.fillText(arrs[2],95,32);
 				ctx.fillText(arrs[3]+"%",140,22);
+				*/
+				ctx.fillText(arrs[0],len,22);
+				ctx.fillText(arrs[1],len+15,12);
+				ctx.fillText(arrs[2],len+15,32);
+				ctx.fillText(arrs[3]+"%",len+60,22);
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,170,20);
+				//ctx.fillText(ss2,170,20);
+				ctx.fillText(ss2,len+88,20);
 			}
 		}
 		
@@ -1543,19 +1625,31 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
+				var len = ss1.length*8;
+				//ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len-5, -3,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[0],165,22);
 				ctx.fillText(arrs[1],180,12);
 				ctx.fillText(arrs[2],180,32);
 				ctx.fillText(arrs[3],215,22);
 				ctx.fillText(arrs[4],230,12);
 				ctx.fillText(arrs[5],230,32);
+				*/
+				ctx.fillText(arrs[0],len,22);
+				ctx.fillText(arrs[1],len+15,12);
+				ctx.fillText(arrs[2],len+15,32);
+				ctx.fillText(arrs[3],len+50,22);
+				ctx.fillText(arrs[4],len+65,12);
+				ctx.fillText(arrs[5],len+65,32);
+				
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,250,20);
+				//ctx.fillText(ss2,250,20);
+				ctx.fillText(ss2,len+90,20);
 			}
 		}
 		
@@ -1614,17 +1708,27 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				ctx.drawImage(base1_image, 150, -3,base1_image.width, base1_image.height);
+				var len = ss1.length*8;
+				//console.log(len+" "+161)
+				//ctx.drawImage(base1_image, 150, -3,base1_image.width, base1_image.height);
+				ctx.drawImage(base1_image, len-10, -3,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
 				ctx.textAlign = "center";
+				/*
 				ctx.fillText(arrs[0],161,12);
 				ctx.fillText(arrs[1],161,32);
 				ctx.fillText(arrs[2],194,12);
 				ctx.fillText(arrs[3],194,32);
+				*/
+				ctx.fillText(arrs[0],len,12);
+				ctx.fillText(arrs[1],len,32);
+				ctx.fillText(arrs[2],len+33,12);
+				ctx.fillText(arrs[3],len+33,32);
 				ctx.textAlign = "left";
 				ctx.font = "16px Times New Roman";
 				ctx.fillText(ss1,0,20);
-				ctx.fillText(ss2,210,20);
+				//ctx.fillText(ss2,210,20);
+				ctx.fillText(ss2,len+64,20);
 			}
 		}
 		
@@ -2368,7 +2472,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	if(no==1){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Pilihlah jawaban yang tepat!</p>";
-		cc1.width = 270;
+		cc1.width = 300;
 		cc1.height = 35;
 		cc2.width = 70;
 		cc2.height = 160;
@@ -2380,7 +2484,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	}else if(no==2){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Pilihlah jawaban yang tepat!</p>";
-		cc1.width = 370;
+		cc1.width = 450;
 		cc1.height = 35;
 		cc2.width = 70;
 		cc2.height = 160;
@@ -2416,7 +2520,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	}else if(no==7){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Pilihlah jawaban yang tepat!</p>";
-		cc1.width = 290;
+		cc1.width = 340;
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
@@ -2439,7 +2543,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	}else if(no==10){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Pilihlah jawaban yang tepat!</p>";
-		cc1.width = 240;
+		cc1.width = 300;
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
