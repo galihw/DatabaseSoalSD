@@ -1146,8 +1146,8 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len1 = ss1.length*7.5;
-				var len2 = ss3.length*7.5;
+				var len1 = ss1.length*9;
+				var len2 = ss3.length*9;
 				//ctx.drawImage(base1_image, 0+230, -3,base1_image.width, base1_image.height);
 				//ctx.drawImage(base1_image, 0+250, 37,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len1, -3,base1_image.width, base1_image.height);
@@ -1229,8 +1229,8 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len1 = ss1.length*7.5;
-				var len2 = ss3.length*7.5;
+				var len1 = ss1.length*9;
+				var len2 = ss3.length*9;
 				//ctx.drawImage(base1_image, 403-280, -3,base1_image.width, base1_image.height);
 				//ctx.drawImage(base1_image, 403-130, 37,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len1, -3,base1_image.width, base1_image.height);
@@ -1278,7 +1278,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len = ss1.length*6.7;
+				var len = ss1.length*8;
 				console.log(len)
 				//ctx.drawImage(base1_image, 403, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
@@ -1316,7 +1316,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len = ss1.length*8;
+				var len = ss1.length*9;
 				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
 				ctx.font = "15px Times New Roman";
@@ -1421,7 +1421,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len = ss1.length*8;
+				var len = ss1.length*9;
 				//ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
 				ctx.font = "15px Times New Roman";
@@ -1458,7 +1458,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len = ss1.length*8;
+				var len = ss1.length*9;
 				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-10, -3,base1_image.width, base1_image.height);
 				ctx.font = "15px Times New Roman";
@@ -1547,7 +1547,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len = ss1.length*8;
+				var len = ss1.length*9;
 				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-5, -3,base1_image.width, base1_image.height);
 				ctx.font = "15px Times New Roman";
@@ -1625,7 +1625,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len = ss1.length*8;
+				var len = ss1.length*9;
 				//ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-5, -3,base1_image.width, base1_image.height);
 				ctx.font = "15px Times New Roman";
@@ -1708,7 +1708,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		function CekJaw(){
 			inside++;
 			if(inside==1){
-				var len = ss1.length*8;
+				var len = ss1.length*9;
 				//console.log(len+" "+161)
 				//ctx.drawImage(base1_image, 150, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-10, -3,base1_image.width, base1_image.height);
@@ -2555,7 +2555,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Dalam sebuah ember terdapat "+StringDesimal(ss[2][0])+" liter air.</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Dalam sebuah ember terdapat "+StringDesimal(ss[2][0])+" liter air.</p>";
-		cc1.width = 500;
+		cc1.width = 600;
 		cc1.height = 35;
 		const DrawPecahanAwal11 = GambarPecahanDesimal11(cc1.id,ss[2],"Ternyata ember tersebut terguling dan air dalam ember tinggal","liter.");
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
@@ -2566,7 +2566,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	}else if(no==13){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan soal cerita berikut!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan soal cerita berikut!</p>";
-		cc1.width = 500;
+		cc1.width = 650;
 		cc1.height = 80;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
@@ -2592,7 +2592,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	}else if(no==15){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan soal cerita berikut!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan soal cerita berikut!</p>";
-		cc1.width = 500;
+		cc1.width = 550;
 		cc1.height = 80;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
