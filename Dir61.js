@@ -1056,7 +1056,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(inside==1){
 				for(var i=0;i<4;i++){
 					var Abjad = ["A","B","C","D"];
-					ctx.font = "16px Times New Roman";
+					ctx.font = "15px Times New Roman";
 					ctx.textAlign = "center";
 					if(arrs[i+2][0]==0){
 						ctx.drawImage(base1_image, 30, -3+40*i,base1_image.width, base1_image.height);
@@ -1090,7 +1090,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			inside++;
 			if(inside==1){
 				ctx.drawImage(base1_image, 0, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				ctx.fillText(arrs[0],10,22);
 				ctx.fillText(arrs[1],33,12);
@@ -1100,7 +1100,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[5],131,12);
 				ctx.fillText(arrs[6],131,32);
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 			}
 		}
 		
@@ -1120,14 +1120,14 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			inside++;
 			if(inside==1){
 				ctx.drawImage(base1_image, 0, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				ctx.fillText(arrs[0],10,22);
 				ctx.fillText(arrs[1],33,12);
 				ctx.fillText(arrs[2],33,32);
 				ctx.fillText(arrs[3],70,22);
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 			}
 		}
 		
@@ -1152,7 +1152,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				//ctx.drawImage(base1_image, 0+250, 37,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len1, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len2, 37,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[0],10+230,22);
@@ -1170,7 +1170,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[5],27+len2,72);
 				
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,280,20);
 				ctx.fillText(ss2,len1+60,20);
@@ -1198,7 +1198,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.drawImage(base1_image, 0, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, 0, 37,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, 0, 77,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				ctx.fillText(arrs[0],12,12);
 				ctx.fillText(arrs[1],12,32);
@@ -1207,7 +1207,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[4],12,92);
 				ctx.fillText(arrs[5],12,112);
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,30,20);
 				ctx.fillText(ss2,30,60);
 				ctx.fillText(ss3,30,100);
@@ -1235,7 +1235,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				//ctx.drawImage(base1_image, 403-130, 37,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len1, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len2, 37,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[0],410-280,22);
@@ -1253,7 +1253,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[5],len2+27,72);
 				
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,450-280,20);
 				ctx.fillText(ss2,len1+47,20);
@@ -1282,7 +1282,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				console.log(len)
 				//ctx.drawImage(base1_image, 403, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[1],410,22);
@@ -1294,7 +1294,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[3],len+27,32);
 				
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,450,20);
 				ctx.fillText(ss2,len+60,20);
@@ -1319,7 +1319,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				var len = ss1.length*8;
 				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[0],75,22);
@@ -1332,7 +1332,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[2],len+25,32);
 				ctx.fillText(arrs[3]+"%",len+70,22);
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,170,20);
 				ctx.fillText(ss2,len+100,20);
@@ -1355,14 +1355,14 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			inside++;
 			if(inside==1){
 				ctx.drawImage(base1_image, 0, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				ctx.fillText(StringDesimal(NBelakangKoma(arrs[0],2)),20,22);
 				ctx.fillText(arrs[1],68,12);
 				ctx.fillText(arrs[2],68,32);
 				ctx.fillText(arrs[3],115,22);
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 			}
 		}
 		
@@ -1388,7 +1388,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(inside==1){
 				for(var i=0;i<4;i++){
 					var Abjad = ["A","B","C","D"];
-					ctx.font = "16px Times New Roman";
+					ctx.font = "15px Times New Roman";
 					ctx.textAlign = "center";
 					if(arrs[i+2][0]==0){
 						ctx.drawImage(base1_image, 30, -3+40*i,base1_image.width, base1_image.height);
@@ -1424,7 +1424,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				var len = ss1.length*8;
 				//ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[0],171,22);
@@ -1436,7 +1436,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[2],len+54,32);
 				
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,230,20);
 				ctx.fillText(ss2,len+80,20);
@@ -1461,7 +1461,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				var len = ss1.length*8;
 				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-10, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[1],80,12);
@@ -1485,7 +1485,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[8],len+90,32);
 				
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,190,20);
 				ctx.fillText(ss2,len+120,20);
@@ -1514,7 +1514,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(inside==1){
 				for(var i=0;i<4;i++){
 					var Abjad = ["A","B","C","D"];
-					ctx.font = "16px Times New Roman";
+					ctx.font = "15px Times New Roman";
 					ctx.textAlign = "center";
 					if(arrs[i+2][0]==""){
 						ctx.drawImage(base1_image, 30, -3+40*i,base1_image.width, base1_image.height);
@@ -1550,7 +1550,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				var len = ss1.length*8;
 				//ctx.drawImage(base1_image, 70, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-5, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[0],80,22);
@@ -1563,7 +1563,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[2],len+15,32);
 				ctx.fillText(arrs[3]+"%",len+60,22);
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,170,20);
 				ctx.fillText(ss2,len+88,20);
@@ -1592,7 +1592,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(inside==1){
 				for(var i=0;i<4;i++){
 					var Abjad = ["A","B","C","D"];
-					ctx.font = "16px Times New Roman";
+					ctx.font = "15px Times New Roman";
 					ctx.textAlign = "center";
 					if(arrs[i+2][0]==""){
 						ctx.drawImage(base1_image, 30, -3+40*i,base1_image.width, base1_image.height);
@@ -1628,7 +1628,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				var len = ss1.length*8;
 				//ctx.drawImage(base1_image, 160, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-5, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[0],165,22);
@@ -1646,7 +1646,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[5],len+65,32);
 				
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,250,20);
 				ctx.fillText(ss2,len+90,20);
@@ -1675,7 +1675,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(inside==1){
 				for(var i=0;i<4;i++){
 					var Abjad = ["A","B","C","D"];
-					ctx.font = "16px Times New Roman";
+					ctx.font = "15px Times New Roman";
 					ctx.textAlign = "center";
 					if(arrs[i+2][0]==""){
 						ctx.drawImage(base1_image, 30, -3+40*i,base1_image.width, base1_image.height);
@@ -1712,7 +1712,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				//console.log(len+" "+161)
 				//ctx.drawImage(base1_image, 150, -3,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, len-10, -3,base1_image.width, base1_image.height);
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.textAlign = "center";
 				/*
 				ctx.fillText(arrs[0],161,12);
@@ -1725,7 +1725,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[2],len+33,12);
 				ctx.fillText(arrs[3],len+33,32);
 				ctx.textAlign = "left";
-				ctx.font = "16px Times New Roman";
+				ctx.font = "15px Times New Roman";
 				ctx.fillText(ss1,0,20);
 				//ctx.fillText(ss2,210,20);
 				ctx.fillText(ss2,len+64,20);
@@ -1754,7 +1754,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(inside==1){
 				for(var i=0;i<4;i++){
 					var Abjad = ["A","B","C","D"];
-					ctx.font = "16px Times New Roman";
+					ctx.font = "15px Times New Roman";
 					ctx.textAlign = "center";
 					if(arrs[i+2][0]==""){
 						ctx.drawImage(base1_image, 30, -3+40*i,base1_image.width, base1_image.height);
