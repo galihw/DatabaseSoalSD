@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				font-family: Arial;
+				color: white;
+			}
+			.splitright {
+				height: 100%;
+				width: 70%;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				overflow-x: hidden;
+				padding-top: 20px;
+			}
+			.split {
+				height: 100%;
+				width: 30%;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				overflow-x: hidden;
+				padding-top: 20px;
+			}
+			.left {
+				left: 0;
+				background-color: #111;
+			}
+			.right {
+				right: 0;
+				background-color: white;
+				font-family: Arial;
+				color: black;
+			}
+			.centered {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+			}
+			
+			.top {
+				position: absolute;
+				top: 0%;
+				left: 50%;
+				transform: translate(-50%, -0%);
+				text-align: center;
+			}
+			.topleft {
+				position: absolute;
+				top: 0px;
+				left: 10px;
+				text-align: left;
+			}
+			
+			
+			
+			.expand-btn {
+				background-color: #003049;
+				border: none;
+				color: #e3d5ca;
+				cursor: pointer;
+				font-size: 1rem;
+				padding: 1rem;
+				text-align: left;
+				transition: 0.5s;
+				width: 100px;
+				height: 40px;
+			}
+			.expand-btnno {
+				background-color: #003049;
+				border: none;
+				color: #e3d5ca;
+				cursor: pointer;
+				font-size: 1rem;
+				padding: 1rem;
+				text-align: left;
+				transition: 0.5s;
+				width: 100px;
+				height: 40px;
+			}
+			.expand-btnno:hover,
+			.active {
+				background-color: #e3d5ca;
+				color: #003049;
+			}
+			.expand-btn:hover,
+			.active {
+				background-color: #e3d5ca;
+				color: #003049;
+			}
+			.expand-btn:after {
+				color: #e3d5ca;
+				content: "+";
+				float: right;
+				font-weight: bold;
+				transition: 0.1s;
+			}
+			.expand-btnno:after {
+				color: #e3d5ca;
+				content: "+";
+				float: right;
+				font-weight: bold;
+				transition: 0.1s;
+			}
+			.expand-btn:hover:after {
+				color: #003049;
+				transition: 0.5s;
+			}
+			.expand-btnno:hover:after {
+				color: #003049;
+				transition: 0.5s;
+			}
+			.active:after {
+				content: "-";
+				color: #003049;
+			}
+			article {
+				color: #e3d5ca;
+				max-height: 0;
+				max-width: 50vw;
+				overflow: hidden;
+				padding: 0 1rem;
+				transition: max-height 0.5s ease-in-out;
+			}
+			.model {
+				text-align: left;
+				width: 50;
+				height: 20px;
+				color: #000;
+			}
+		
+			table, td {
+			  border: 1px solid black;
+			  border-collapse: collapse;
+			  padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="split left">
+			<div class="top">
+				<h4>Pilih Bab dan Nomor</h4>
+				<section>
+					<button class="expand-btn">Bab</button>
+					<article>
+						<tr>
+							<td><button id="btn1" class="model" onclick="MasukBab(1)">3-1</button></td>
+							<td><button id="btn2" class="model" onclick="MasukBab(2)">3-2</button></td>
+							<td><button id="btn3" class="model" onclick="MasukBab(3)">3-3</button></td>
+							<td><button id="btn4" class="model" onclick="MasukBab(4)">3-4</button></td>
+						</tr>
+						<tr>
+							<td><button id="btn5" class="model" onclick="MasukBab(5)">4-1</button></td>
+							<td><button id="btn6" class="model" onclick="MasukBab(6)">4-2</button></td>
+							<td><button id="btn7" class="model" onclick="MasukBab(7)">4-3</button></td>
+							<td><button id="btn8" class="model" onclick="MasukBab(8)">4-4</button></td>
+						</tr>
+						<tr>
+							<td><button id="btn9" class="model" onclick="MasukBab(9)">4-5</button></td>
+							<td><button id="btn10" class="model" onclick="MasukBab(10)">4-6</button></td>
+							<td><button id="btn11" class="model" onclick="MasukBab(11)">5-1</button></td>
+							<td><button id="btn12" class="model" onclick="MasukBab(12)">5-2</button></td>
+						</tr>
+						<tr>
+							<td><button id="btn13" class="model" onclick="MasukBab(13)">5-3</button></td>
+							<td><button id="btn14" class="model" onclick="MasukBab(14)">5-4</button></td>
+							<td><button id="btn15" class="model" onclick="MasukBab(15)">5-5</button></td>
+							<td><button id="btn16" class="model" onclick="MasukBab(16)">5-6</button></td>
+						</tr>
+						<tr>
+							<td><button id="btn17" class="model" onclick="MasukBab(17)">5-7</button></td>
+							<td><button id="btn18" class="model" onclick="MasukBab(18)">5-8</button></td>
+							<td><button id="btn19" class="model" onclick="MasukBab(19)">6-1</button></td>
+							<td><button id="btn20" class="model" onclick="MasukBab(20)">6-2</button></td>
+						</tr>
+						<tr>
+							<td><button id="btn21" class="model" onclick="MasukBab(21)">6-3</button></td>
+							<td><button id="btn22" class="model" onclick="MasukBab(22)">6-4</button></td>
+						</tr>
+					</article>
+				</section>
+				
+				<section>
+					<button class="expand-btnno">Nomor</button>
+					<article>
+						<tr>
+							<td><button id="btnno1" class="model" onclick="MasukNo(1)">01</button></td>
+							<td><button id="btnno2" class="model" onclick="MasukNo(2)">02</button></td>
+							<td><button id="btnno3" class="model" onclick="MasukNo(3)">03</button></td>
+							<td><button id="btnno4" class="model" onclick="MasukNo(4)">04</button></td>
+						</tr>
+						<tr>
+							<td><button id="btnno5" class="model" onclick="MasukNo(5)">05</button></td>
+							<td><button id="btnno6" class="model" onclick="MasukNo(6)">06</button></td>
+							<td><button id="btnno7" class="model" onclick="MasukNo(7)">07</button></td>
+							<td><button id="btnno8" class="model" onclick="MasukNo(8)">08</button></td>
+						</tr>
+						<tr>
+							<td><button id="btnno9" class="model" onclick="MasukNo(9)">09</button></td>
+							<td><button id="btnno10" class="model" onclick="MasukNo(10)">10</button></td>
+							<td><button id="btnno11" class="model" onclick="MasukNo(11)">11</button></td>
+							<td><button id="btnno12" class="model" onclick="MasukNo(12)">12</button></td>
+						</tr>
+						<tr>
+							<td><button id="btnno13" class="model" onclick="MasukNo(13)">13</button></td>
+							<td><button id="btnno14" class="model" onclick="MasukNo(14)">14</button></td>
+							<td><button id="btnno15" class="model" onclick="MasukNo(15)">15</button></td>
+							<td><button id="btnno16" class="model" onclick="MasukNo(16)">16</button></td>
+						</tr>
+						<tr>
+							<td><button id="btnno17" class="model" onclick="MasukNo(17)">17</button></td>
+							<td><button id="btnno18" class="model" onclick="MasukNo(18)">18</button></td>
+							<td><button id="btnno19" class="model" onclick="MasukNo(19)">19</button></td>
+							<td><button id="btnno20" class="model" onclick="MasukNo(20)">20</button></td>
+						</tr>
+						<tr>
+							<td><button id="btnno21" class="model" onclick="MasukNo(21)">21</button></td>
+							<td><button id="btnno22" class="model" onclick="MasukNo(22)">22</button></td>
+							<td><button id="btnno23" class="model" onclick="MasukNo(23)">23</button></td>
+							<td><button id="btnno24" class="model" onclick="MasukNo(24)">24</button></td>
+						</tr>
+						<tr>
+							<td><button id="btnno25" class="model" onclick="MasukNo(25)">25</button></td>
+							<td><button id="btnno26" class="model" onclick="MasukNo(26)">26</button></td>
+							<td><button id="btnno27" class="model" onclick="MasukNo(27)">27</button></td>
+							<td><button id="btnno28" class="model" onclick="MasukNo(28)">28</button></td>
+						</tr>
+						<tr>
+							<td><button id="btnno29" class="model" onclick="MasukNo(29)">29</button></td>
+							<td><button id="btnno30" class="model" onclick="MasukNo(30)">30</button></td>
+						</tr>
+					</article>
+				</section>
+				<p></p>
+				<div id="_Bab">Kelas-Bab = 3-1</div>
+				<div id="_No">No = 1</div>
+				<p></p>
+				<button id="bAmbil" class="model" onclick="fAmbil()">Ambil</button>
+				<br>
+				<br>
+				<div id="_Total">Total ambil = 0</div>
+				<br>
+				<button id="bLihat" class="model" onclick="fLihatSoal()" disabled="true">Lihat Soal</button>
+				<br>
+				<button id="bPrint" class="model" onclick="fPreview()" disabled="true">Preview</button>
+				
+				<script>
+					// seleksi tombol bab dan tombol nomor
+					const expandBtn = document.querySelector(".expand-btn");
+					const expandBtnno = document.querySelector(".expand-btnno");
+					expandBtn.addEventListener("click", function () {
+						//console.log("masuk")
+						expandBtn.classList.toggle("active");
+						const article = expandBtn.nextElementSibling;
+						if (article.style.maxHeight) {
+							article.style.maxHeight = null;
+						} else {
+							article.style.maxHeight = article.scrollHeight + "px";
+						}
+					});
+					expandBtnno.addEventListener("click", function () {
+						//console.log("masuk")
+						expandBtnno.classList.toggle("active");
+						const article = expandBtnno.nextElementSibling;
+						if (article.style.maxHeight) {
+							article.style.maxHeight = null;
+						} else {
+							article.style.maxHeight = article.scrollHeight + "px";
+						}
+					});
+					function MasukBab(no){
+						//klik bab
+						nBab = no;
+						//console.log(nNo+" "+nBab+" "+arBabNo[nBab-1])
+						if(nNo>arBabNo[nBab-1]) nNo = arBabNo[nBab-1];
+						maxNo=arBabNo[nBab];
+						ShowHideButton();
+						
+						Cek(nBab,nNo);
+						//document.getElementById("_Bab").innerHTML="Bab = "+nBab;
+						strBab = StringBab[nBab-1].split("");
+						document.getElementById("_Bab").innerHTML="Kelas "+strBab[0]+" - Bab "+strBab[2];
+						document.getElementById("_No").innerHTML="No = "+nNo;
+					}
+					function MasukNo(no){
+						//klik nomor soal
+						nNo = no;
+						Cek(nBab,nNo);
+						
+						//document.getElementById("_Bab").innerHTML="Bab = "+nBab;
+						strBab = StringBab[nBab-1].split("");
+						document.getElementById("_Bab").innerHTML="Kelas "+strBab[0]+" - Bab "+strBab[2];
+						document.getElementById("_No").innerHTML="No = "+nNo;
+					}
+					function Adds(){
+						//console.log("Adds");
+						if(fCek){
+							console.log("pilihan siap");
+						}
+					}
+					function Cek(no1,no2){
+						//console.log("Bab = "+no1+" -- No = "+no2);
+						fCek = !(no1==0 || no2==0);
+						nmPrint[no1-1](no2,"d1","c1","d2","c2","d3","c3","d4",0);
+						
+					}
+					function ButtonShow(nMax){
+						// button bab - <=nMax show - > nMax hide
+						for(var i=1;i<=22;i++){
+							var element=document.getElementById("btn"+i);
+							if(i>nMax){
+								element.setAttribute("hidden", "hidden");
+							}else{
+								element.removeAttribute("hidden");
+							}
+						}
+					}
+					function ButtonShowNo(nMax){
+						for(var i=1;i<=30;i++){
+							var element=document.getElementById("btnno"+i);
+							if(i>nMax){
+								//element.setAttribute("hidden", "hidden");
+								element.disabled = true;
+							}else{
+								//element.removeAttribute("hidden");
+								element.disabled = false;
+							}
+						}
+					}
+				</script>
+			</div>
+		</div>
+
+		<div class="splitright right">
+			<div class="topleft">
+				<h3>Bentuk Soal:</h3>
+				<div id="container">
+					<div id="d1"></div>
+					<canvas id="c1"></canvas>
+					<div id="d2"></div>
+					<canvas id="c2"></canvas>
+					<div id="d3"></div>
+					<canvas id="c3"></canvas>
+					<div id="d4"></div>
+					
+					
+					<div id="d11"></div>
+					<canvas id="c11"></canvas>
+					<div id="d12"></div>
+					<canvas id="c12"></canvas>
+					<div id="d13"></div>
+					<canvas id="c13"></canvas>
+					<div id="d14"></div>
+					
+					<div id="d21"></div>
+					<canvas id="c21"></canvas>
+					<div id="d22"></div>
+					<canvas id="c22"></canvas>
+					<div id="d23"></div>
+					<canvas id="c23"></canvas>
+					<div id="d24"></div>
+					
+					<div id="d31"></div>
+					<canvas id="c31"></canvas>
+					<div id="d32"></div>
+					<canvas id="c32"></canvas>
+					<div id="d33"></div>
+					<canvas id="c33"></canvas>
+					<div id="d34"></div>
+					
+					<div id="d41"></div>
+					<canvas id="c41"></canvas>
+					<div id="d42"></div>
+					<canvas id="c42"></canvas>
+					<div id="d43"></div>
+					<canvas id="c43"></canvas>
+					<div id="d44"></div>
+					
+					<div id="d51"></div>
+					<canvas id="c51"></canvas>
+					<div id="d52"></div>
+					<canvas id="c52"></canvas>
+					<div id="d53"></div>
+					<canvas id="c53"></canvas>
+					<div id="d54"></div>
+					
+					<div id="d61"></div>
+					<canvas id="c61"></canvas>
+					<div id="d62"></div>
+					<canvas id="c62"></canvas>
+					<div id="d63"></div>
+					<canvas id="c63"></canvas>
+					<div id="d64"></div>
+					
+					<div id="d71"></div>
+					<canvas id="c71"></canvas>
+					<div id="d72"></div>
+					<canvas id="c72"></canvas>
+					<div id="d73"></div>
+					<canvas id="c73"></canvas>
+					<div id="d74"></div>
+					
+					<div id="d81"></div>
+					<canvas id="c81"></canvas>
+					<div id="d82"></div>
+					<canvas id="c82"></canvas>
+					<div id="d83"></div>
+					<canvas id="c83"></canvas>
+					<div id="d84"></div>
+					
+					<div id="d91"></div>
+					<canvas id="c91"></canvas>
+					<div id="d92"></div>
+					<canvas id="c92"></canvas>
+					<div id="d93"></div>
+					<canvas id="c93"></canvas>
+					<div id="d94"></div>
+					
+					<div id="d101"></div>
+					<canvas id="c101"></canvas>
+					<div id="d102"></div>
+					<canvas id="c102"></canvas>
+					<div id="d103"></div>
+					<canvas id="c103"></canvas>
+					<div id="d104"></div>
+					
+					<div id="d111"></div>
+					<canvas id="c111"></canvas>
+					<div id="d112"></div>
+					<canvas id="c112"></canvas>
+					<div id="d113"></div>
+					<canvas id="c113"></canvas>
+					<div id="d114"></div>
+					
+					<div id="d121"></div>
+					<canvas id="c121"></canvas>
+					<div id="d122"></div>
+					<canvas id="c122"></canvas>
+					<div id="d123"></div>
+					<canvas id="c123"></canvas>
+					<div id="d124"></div>
+					
+					<div id="d131"></div>
+					<canvas id="c131"></canvas>
+					<div id="d132"></div>
+					<canvas id="c132"></canvas>
+					<div id="d133"></div>
+					<canvas id="c133"></canvas>
+					<div id="d134"></div>
+					
+					<div id="d141"></div>
+					<canvas id="c141"></canvas>
+					<div id="d142"></div>
+					<canvas id="c142"></canvas>
+					<div id="d143"></div>
+					<canvas id="c143"></canvas>
+					<div id="d144"></div>
+					
+					<div id="d151"></div>
+					<canvas id="c151"></canvas>
+					<div id="d152"></div>
+					<canvas id="c152"></canvas>
+					<div id="d153"></div>
+					<canvas id="c153"></canvas>
+					<div id="d154"></div>
+					
+					<div id="d161"></div>
+					<canvas id="c161"></canvas>
+					<div id="d162"></div>
+					<canvas id="c162"></canvas>
+					<div id="d163"></div>
+					<canvas id="c163"></canvas>
+					<div id="d164"></div>
+					
+					<div id="d171"></div>
+					<canvas id="c171"></canvas>
+					<div id="d172"></div>
+					<canvas id="c172"></canvas>
+					<div id="d173"></div>
+					<canvas id="c173"></canvas>
+					<div id="d174"></div>
+					
+					<div id="d181"></div>
+					<canvas id="c181"></canvas>
+					<div id="d182"></div>
+					<canvas id="c182"></canvas>
+					<div id="d183"></div>
+					<canvas id="c183"></canvas>
+					<div id="d184"></div>
+					
+					<div id="d191"></div>
+					<canvas id="c191"></canvas>
+					<div id="d192"></div>
+					<canvas id="c192"></canvas>
+					<div id="d193"></div>
+					<canvas id="c193"></canvas>
+					<div id="d194"></div>
+					
+					<div id="d201"></div>
+					<canvas id="c201"></canvas>
+					<div id="d202"></div>
+					<canvas id="c202"></canvas>
+					<div id="d203"></div>
+					<canvas id="c203"></canvas>
+					<div id="d204"></div>
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./Dir31.js"></script>
+		<script type="text/javascript" src="./Dir32.js"></script>
+		<script type="text/javascript" src="./Dir33.js"></script>
+		<script type="text/javascript" src="./Dir34.js"></script>
+		<script type="text/javascript" src="./Dir41.js"></script>
+		<script type="text/javascript" src="./Dir42.js"></script>
+		<script type="text/javascript" src="./Dir43.js"></script>
+		<script type="text/javascript" src="./Dir44.js"></script>
+		<script type="text/javascript" src="./Dir45.js"></script>
+		<script type="text/javascript" src="./Dir46.js"></script>
+		<script type="text/javascript" src="./Dir51.js"></script>
+		<script type="text/javascript" src="./Dir52.js"></script>
+		<script type="text/javascript" src="./Dir53.js"></script>
+		<script type="text/javascript" src="./Dir54.js"></script>
+		<script type="text/javascript" src="./Dir55.js"></script>
+		<script type="text/javascript" src="./Dir56.js"></script>
+		<script type="text/javascript" src="./Dir57.js"></script>
+		<script type="text/javascript" src="./Dir58.js"></script>
+		<script type="text/javascript" src="./Dir61.js"></script>
+		<script type="text/javascript" src="./Dir62.js"></script>
+		<script type="text/javascript" src="./Dir63.js"></script>
+		<script type="text/javascript" src="./Dir64.js"></script>
+		<script type="text/javascript">
+			
+			var arBabNo = [13,12,30,14,17,24,16,18,16,16,20,20,20,20,20,17,17,24,20,11,18,10];
+			var nBab = 1;
+			var nNo = 1;
+			var maxBab=22;// <SDSDSD>; maks 22
+			var maxNo=arBabNo[nBab];
+			var strBab
+			
+			// untuk Kelas-Bab
+			var StringBab = ["3-1","3-2","3-3","3-4",
+							 "4-1","4-2","4-3","4-4","4-5","4-6",
+							 "5-1","5-2","5-3","5-4","5-5","5-6","5-7","5-8",
+							 "6-1","6-2","6-3","6-4"
+							 ];
+			var fCek = false;
+			
+			var nmPrint = [	Print31,Print32,Print33,Print34,
+							Print41,Print42,Print43,Print44,Print45,Print46,
+							Print51,Print52,Print53,Print54,Print55,Print56,Print57,Print58,
+							Print61,Print62,Print63,Print64];
+			var np = 0;
+			var no = 0;
+			var ArrAmbil = [];
+			
+			Cek(nBab,nNo); //<< awal harus lihat bab 1 nomor 1
+			function ShowHideButton(){
+				//console.log(nBab,arBabNo[nBab-1])
+				maxNo = arBabNo[nBab-1];
+				ButtonShow(maxBab);
+				ButtonShowNo(maxNo);
+				//Cek(nBab,nNo); << gak usah
+			}
+			function fAmbil(){
+				// Ambil soal yang aktif
+				ArrAmbil.push({bab:nBab,no:nNo});
+				document.getElementById("_Total").innerHTML="Total ambil = "+ArrAmbil.length;
+				//console.log(ArrAmbil);
+				
+				if(ArrAmbil.length==20){
+					document.getElementById("bAmbil").disabled = true;
+				}
+				
+				document.getElementById("bLihat").disabled = false;
+			}
+			function fLihatSoal(){
+				// melihat seluruh soal yang sudah di ambil
+				ButtonShow(0);
+				ButtonShowNo(0);
+				var element
+				element=document.getElementById("bAmbil");
+				element.disabled = true;
+				element=document.getElementById("bLihat");
+				element.disabled = true;
+			
+				var d1 = document.getElementById("d1");
+				var d2 = document.getElementById("d2");
+				var d3 = document.getElementById("d3");
+				var d4 = document.getElementById("d4");
+				
+				const ctx1 = c1.getContext("2d");ctx1.reset();ctx1.clearRect(0, 0, 1000, 1000);
+				const ctx2 = c2.getContext("2d");ctx2.reset();ctx2.clearRect(0, 0, 1000, 1000);
+				const ctx3 = c3.getContext("2d");ctx3.reset();ctx3.clearRect(0, 0, 1000, 1000);
+				d1.innerHTML="";
+				d2.innerHTML="";
+				d3.innerHTML="";
+				d4.innerHTML="";
+				c1.width=0;c1.height=0;
+				c2.width=0;c2.height=0;
+				c3.width=0;c3.height=0;
+				
+				
+				for(var i=1;i<=ArrAmbil.length;i++){
+					var nb = ArrAmbil[i-1].bab;
+					var nn = ArrAmbil[i-1].no;
+					
+					var dd1 = "d"+i+"1";
+					var dd2 = "d"+i+"2";
+					var dd3 = "d"+i+"3";
+					var dd4 = "d"+i+"4";
+					var cc1 = "c"+i+"1";
+					var cc2 = "c"+i+"2";
+					var cc3 = "c"+i+"3";
+					nmPrint[nb-1](nn,dd1,cc1,dd2,cc2,dd3,cc3,dd4,i);
+				}
+				
+				document.getElementById("bPrint").disabled = false;
+			}
+			function fPreview(){
+				// ambil data
+				var ArWH = [];
+				var ArUrl = [];
+				var ArInner = [];
+				
+				//array jawaban:
+				var arJawab = [];
+				
+				//console.log("---"+ArrAmbil.length)
+				for(var i=1;i<=ArrAmbil.length;i++){
+					var dd1 = "d"+i+"1";
+					var dd2 = "d"+i+"2";
+					var dd3 = "d"+i+"3";
+					var dd4 = "d"+i+"4";
+					var cc1 = "c"+i+"1";
+					var cc2 = "c"+i+"2";
+					var cc3 = "c"+i+"3";
+					var Gdd1=document.getElementById(dd1);
+					var Gdd2=document.getElementById(dd2);
+					var Gdd3=document.getElementById(dd3);
+					var Gdd4=document.getElementById(dd4);
+					var Gcc1=document.getElementById(cc1);
+					var Gcc2=document.getElementById(cc2);
+					var Gcc3=document.getElementById(cc3);
+					
+					//console.log(Gdd1.innerHTML+" -- "+Gdd2.innerHTML+" -- "+Gdd3.innerHTML+" -- "+Gdd4.innerHTML);
+					//console.log("---"+Gcc1.width);
+					
+					ArWH.push([Gcc1.width,Gcc1.height,Gcc2.width,Gcc2.height,Gcc3.width,Gcc3.height]);
+					ArUrl.push([Gcc1.toDataURL('image/png'),Gcc2.toDataURL('image/png'),Gcc3.toDataURL('image/png')]);
+					ArInner.push([Gdd1.innerHTML,Gdd2.innerHTML,Gdd3.innerHTML,Gdd4.innerHTML]);
+				}
+				
+				document.body.innerHTML = ''; // reset body // kosongkan layar
+				
+				
+				var divPrint = document.createElement('div');
+				divPrint.innerHTML = "Kumpulan soal pilihan";
+				divPrint.style.align = "center";
+				document.body.appendChild(divPrint);
+				
+				var buttonCetak = document.createElement('button');
+				buttonCetak.innerHTML = "Cetak";
+				buttonCetak.onclick = funcPrint;
+				document.body.appendChild(buttonCetak);
+				var buttonUlang = document.createElement('button');
+				buttonUlang.innerHTML = "Ulang";
+				buttonUlang.onclick = funcUlang;
+				document.body.appendChild(buttonUlang);
+				
+				
+				// cetak satu per satu soal
+				for(var i=1;i<=ArrAmbil.length;i++){
+					var wh = ArWH[i-1];
+					//console.log(wh[0])
+					var url = ArUrl[i-1];
+					var inner = ArInner[i-1];
+					var ddd1 = document.createElement('div');
+					var ddd2 = document.createElement('div');
+					var ddd3 = document.createElement('div');
+					var ddd4 = document.createElement('div');
+					ddd1.style.color = "#000000"
+					ddd2.style.color = "#000000"
+					ddd3.style.color = "#000000"
+					ddd4.style.color = "#000000"
+					
+					var ccc1 = document.createElement('img');
+					ccc1.width = wh[0];
+					ccc1.height = wh[1];
+					var ccc2 = document.createElement('img');
+					ccc2.width = wh[2];
+					ccc2.height = wh[3];
+					var ccc3 = document.createElement('img');
+					ccc3.width = wh[4];
+					ccc3.height = wh[5];
+					
+					if(ccc1.height==0)	hidingElemen(ccc1);
+					if(ccc2.height==0)	hidingElemen(ccc2);
+					if(ccc3.height==0)	hidingElemen(ccc3);
+					
+					document.body.appendChild(ddd1);
+					document.body.appendChild(ccc1);
+					document.body.appendChild(ddd2);
+					document.body.appendChild(ccc2);
+					document.body.appendChild(ddd3);
+					document.body.appendChild(ccc3);
+					document.body.appendChild(ddd4);
+					
+					ddd1.innerHTML = inner[0];
+					ccc1.src = url[0];
+					ddd2.innerHTML = inner[1];
+					ccc2.src = url[1];
+					ddd3.innerHTML = inner[2];
+					ccc3.src = url[2];
+					ddd4.innerHTML = "";//inner[3];
+					
+					//arJawab.push(inner[3]);
+					arJawab.push(inner[3][inner[3].length - 1]);
+					
+					if(inner[0]=="")	hidingElemen(ddd1);
+					if(inner[1]=="")	hidingElemen(ddd2);
+					if(inner[2]=="")	hidingElemen(ddd3);
+					if(inner[3]=="")	hidingElemen(ddd4);
+				}
+				
+				var canvjawab = document.createElement('canvas');
+				document.body.appendChild(canvjawab);
+				canvjawab.width = 300;
+				canvjawab.height = 1010; // kalau 1000 ada 2 baris yang bisa nyelip di kertas jawaban
+				ctxjawab = canvjawab.getContext("2d");
+				//ctxjawab.fillStyle = '#D3D3D3';
+				ctxjawab.fillStyle = '#ffffff';
+				ctxjawab.fillRect(0, 0, canvjawab.width, canvjawab.height);
+				ctxjawab.fillStyle = '#000000';
+				ctxjawab.textAlign = "left";
+				ctxjawab.font = "16px Arial";
+				ctxjawab.fillText("Kunci Jawaban : ",0,20);
+				for(var i=0;i<20;i++){
+					if(i<arJawab.length){
+						ctxjawab.fillText((i+1)+". "+arJawab[i],0,40+20*i);
+					}
+				}
+				
+				
+				function funcPrint(){
+					// klik dan save to pdf atau print langsung
+					nonAktifElemen(buttonCetak); // non aktif tombol
+					nonAktifElemen(buttonUlang); // non aktif tombol
+					hidingElemen(buttonCetak); // hide sebelum print
+					hidingElemen(buttonUlang); // hide sebelum print
+					print();
+				}
+				function funcUlang(){
+					// F5
+					window.parent.location.href="MainGenerator.html";
+				}
+			}
+			function hidingElemen(elem){
+				//hiding elemen
+				elem.setAttribute("hidden", "hidden");
+			}
+			function nonAktifElemen(elem){
+				//non aktif elemen
+				elem.disabled = true;
+			}
+			
+			ShowHideButton()
+			//document.getElementById("_Bab").innerHTML="Bab = "+nBab;
+			strBab = StringBab[nBab-1].split("");
+			document.getElementById("_Bab").innerHTML="Kelas "+strBab[0]+" - Bab "+strBab[2];
+			document.getElementById("_No").innerHTML="No = "+nNo;
+			document.getElementById("_Total").innerHTML="Total ambil = "+0;
+			nonAktifElemen(document.getElementById("bLihat"));
+			nonAktifElemen(document.getElementById("bPrint"));
+		</script>
+	</body>
+</html>
