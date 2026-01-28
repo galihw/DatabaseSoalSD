@@ -1431,7 +1431,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ctx.fillText(arrs[1],214,12);
 				ctx.fillText(arrs[2],214,32);
 				*/
-				ctx.fillText(arrs[0],len+11,22);
+				ctx.fillText(arrs[0],len+7,22);
 				ctx.fillText(arrs[1],len+54,12);
 				ctx.fillText(arrs[2],len+54,32);
 				
