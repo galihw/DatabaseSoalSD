@@ -156,32 +156,33 @@
 							<td><button id="btn4" class="model" onclick="MasukBab(4)">3-4</button></td>
 						</tr>
 						<tr>
-							<td><button id="btn5" class="model" onclick="MasukBab(5)">4-1</button></td>
-							<td><button id="btn6" class="model" onclick="MasukBab(6)">4-2</button></td>
-							<td><button id="btn7" class="model" onclick="MasukBab(7)">4-3</button></td>
-							<td><button id="btn8" class="model" onclick="MasukBab(8)">4-4</button></td>
+							<td><button id="btn5" class="model" onclick="MasukBab(5)">3-5</button></td>
+							<td><button id="btn6" class="model" onclick="MasukBab(6)">4-1</button></td>
+							<td><button id="btn7" class="model" onclick="MasukBab(7)">4-2</button></td>
+							<td><button id="btn8" class="model" onclick="MasukBab(8)">4-3</button></td>
 						</tr>
 						<tr>
-							<td><button id="btn9" class="model" onclick="MasukBab(9)">4-5</button></td>
-							<td><button id="btn10" class="model" onclick="MasukBab(10)">4-6</button></td>
-							<td><button id="btn11" class="model" onclick="MasukBab(11)">5-1</button></td>
-							<td><button id="btn12" class="model" onclick="MasukBab(12)">5-2</button></td>
+							<td><button id="btn9" class="model" onclick="MasukBab(9)">4-4</button></td>
+							<td><button id="btn10" class="model" onclick="MasukBab(10)">4-5</button></td>
+							<td><button id="btn11" class="model" onclick="MasukBab(11)">4-6</button></td>
+							<td><button id="btn12" class="model" onclick="MasukBab(12)">5-1</button></td>
 						</tr>
 						<tr>
-							<td><button id="btn13" class="model" onclick="MasukBab(13)">5-3</button></td>
-							<td><button id="btn14" class="model" onclick="MasukBab(14)">5-4</button></td>
-							<td><button id="btn15" class="model" onclick="MasukBab(15)">5-5</button></td>
-							<td><button id="btn16" class="model" onclick="MasukBab(16)">5-6</button></td>
+							<td><button id="btn13" class="model" onclick="MasukBab(13)">5-2</button></td>
+							<td><button id="btn14" class="model" onclick="MasukBab(14)">5-3</button></td>
+							<td><button id="btn15" class="model" onclick="MasukBab(15)">5-4</button></td>
+							<td><button id="btn16" class="model" onclick="MasukBab(16)">5-5</button></td>
 						</tr>
 						<tr>
-							<td><button id="btn17" class="model" onclick="MasukBab(17)">5-7</button></td>
-							<td><button id="btn18" class="model" onclick="MasukBab(18)">5-8</button></td>
-							<td><button id="btn19" class="model" onclick="MasukBab(19)">6-1</button></td>
-							<td><button id="btn20" class="model" onclick="MasukBab(20)">6-2</button></td>
+							<td><button id="btn17" class="model" onclick="MasukBab(17)">5-6</button></td>
+							<td><button id="btn18" class="model" onclick="MasukBab(18)">5-7</button></td>
+							<td><button id="btn19" class="model" onclick="MasukBab(19)">5-8</button></td>
+							<td><button id="btn20" class="model" onclick="MasukBab(20)">6-1</button></td>
 						</tr>
 						<tr>
-							<td><button id="btn21" class="model" onclick="MasukBab(21)">6-3</button></td>
-							<td><button id="btn22" class="model" onclick="MasukBab(22)">6-4</button></td>
+							<td><button id="btn21" class="model" onclick="MasukBab(21)">6-2</button></td>
+							<td><button id="btn22" class="model" onclick="MasukBab(22)">6-3</button></td>
+							<td><button id="btn23" class="model" onclick="MasukBab(23)">6-4</button></td>
 						</tr>
 					</article>
 				</section>
@@ -312,7 +313,7 @@
 					}
 					function ButtonShow(nMax){
 						// button bab - <=nMax show - > nMax hide
-						for(var i=1;i<=22;i++){
+						for(var i=1;i<=23;i++){
 							var element=document.getElementById("btn"+i);
 							if(i>nMax){
 								element.setAttribute("hidden", "hidden");
@@ -517,6 +518,7 @@
 		<script type="text/javascript" src="./Dir32.js"></script>
 		<script type="text/javascript" src="./Dir33.js"></script>
 		<script type="text/javascript" src="./Dir34.js"></script>
+		<script type="text/javascript" src="./Dir35.js"></script>
 		<script type="text/javascript" src="./Dir41.js"></script>
 		<script type="text/javascript" src="./Dir42.js"></script>
 		<script type="text/javascript" src="./Dir43.js"></script>
@@ -537,22 +539,22 @@
 		<script type="text/javascript" src="./Dir64.js"></script>
 		<script type="text/javascript">
 			
-			var arBabNo = [13,12,30,14,17,24,16,18,16,16,20,20,20,20,20,17,17,24,20,11,18,10];
+			var arBabNo = [13,12,30,14,15,17,24,16,18,16,16,20,20,20,20,20,17,17,24,20,11,18,10];
 			var nBab = 1;
 			var nNo = 1;
-			var maxBab=22;// <SDSDSD>; maks 22
+			var maxBab=23;// <SDSDSD>; maks 23
 			var maxNo=arBabNo[nBab];
 			var strBab
 			
 			// untuk Kelas-Bab
-			var StringBab = ["3-1","3-2","3-3","3-4",
+			var StringBab = ["3-1","3-2","3-3","3-4","3-5",
 							 "4-1","4-2","4-3","4-4","4-5","4-6",
 							 "5-1","5-2","5-3","5-4","5-5","5-6","5-7","5-8",
 							 "6-1","6-2","6-3","6-4"
 							 ];
 			var fCek = false;
 			
-			var nmPrint = [	Print31,Print32,Print33,Print34,
+			var nmPrint = [	Print31,Print32,Print33,Print34,Print35,
 							Print41,Print42,Print43,Print44,Print45,Print46,
 							Print51,Print52,Print53,Print54,Print55,Print56,Print57,Print58,
 							Print61,Print62,Print63,Print64];
@@ -689,6 +691,11 @@
 					ddd2.style.color = "#000000"
 					ddd3.style.color = "#000000"
 					ddd4.style.color = "#000000"
+					ddd1.style.font = "16px arial";
+					ddd2.style.font = "16px arial";
+					ddd3.style.font = "16px arial";
+					ddd4.style.font = "16px arial";
+					
 					
 					var ccc1 = document.createElement('img');
 					ccc1.width = wh[0];

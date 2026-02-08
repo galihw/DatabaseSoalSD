@@ -4,34 +4,48 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		/* ---- RANDOM isi Array ---- */
 		/* Global */
 		for (var i=0; i<Arr.length; i++){
-			r = Math.floor(Math.random() * Arr.length);
-			a = Arr[i];
+			var r = Math.floor(Math.random() * Arr.length);
+			var a = Arr[i];
 			Arr[i] = Arr[r];
 			Arr[r] = a;
 		}
 		return Arr
 	}
 	function RandomAngkaAtoB(a,b){   
-		r = a+Math.ceil(Math.random() * b);
+		var r = a+Math.ceil(Math.random() * b);
 		return r;
 	}
+	function NoJawabanBenar(Arr, jwb){
+		for (var i=0; i<Arr.length; i++){
+			if (Arr[i]==jwb){
+				return i;
+				break;
+			}
+		}
+	}
+	function GetABCD(no){
+		var ABCD = ["A","B","C","D"]
+		return ABCD[no]
+	}
 	function Mods(m,n){
-		m0 = m;
-		ct = 0;
+		var m0 = m;
+		var m0b = m0;
+		var ct = 0;
 		do{
+			m0b = m0;
 			m0-=n;
 			ct++;
-		}while(m0>0);
+		}while(m0>=0);
 		
-		sisa = Math.abs(m0);
+		var sisa = Math.abs(m0b);
 		return sisa;
 	}
 	function CariFPB(ar){
 		//https://www.ketutrare.com/2019/05/contoh-aplikasi-fpb-dan-kpk-menggunakan-bahasa-c.html
 		
-		min = ar[0];
-		max = ar[0];
-		for(i=0;i<ar.length;i++){
+		var min = ar[0];
+		var max = ar[0];
+		for(var i=0;i<ar.length;i++){
 			min = Math.min(min,ar[i]);
 			max = Math.max(max,ar[i]);
 		}
@@ -42,7 +56,7 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		do {
 			iter++;
 			ff = 1;
-			for(i=0;i<ar.length;i++){
+			for(var i=0;i<ar.length;i++){
 				f[i] = Mods(ar[i],iter)==0;
 				ff *= f[i];
 			}
@@ -65,6 +79,99 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			else 						gg += strff.substr(i,1);
 		}
 		return gg;
+	}
+	function StringMinus(ff){
+		var strff = ""+ff;
+		const gg = strff.split("-");
+		var fix = gg[0];
+		for(var i=1;i<gg.length;i++){
+			fix+="–"+gg[i];
+		}
+		return fix;
+	}
+	function SplitString(ff){
+		var gg = new Array();
+		var strff = ""+ff;
+		var len = strff.length;
+		for (var i=0; i<len; i++){
+			gg.push(strff.substr(i,1));
+		}
+		
+		return gg;
+	}
+	function StringRibuan(str){
+		var strfix = "";
+		var arfix = new Array();
+		var StrArray = SplitString(str);
+		for (var i=0; i<StrArray.length; i++){
+			arfix.push(StrArray[i]);
+		}
+		
+		var ct = 0;
+		var m = 0;
+		var n = 0;
+		var ctmax = StrArray.length;
+		var arct = new Array();
+		for (var i=StrArray.length-1; i>=0; i--){
+			ct++;
+			ctmax--;
+			if(ct==3){
+				ct = 0;
+				m++;
+				arct.push(3);
+			}
+		}
+		var n = StrArray.length - 3*arct.length;
+		
+		var iter=-1;
+		strfix="";
+		for (var i=0; i<n; i++){
+			iter++;
+			strfix += arfix[iter];
+		}
+		if (n>0)
+			strfix +=  ".";
+		for (var i=0; i<m; i++){
+			for (var j=0; j<3; j++){
+				iter++;
+				strfix += arfix[iter];
+			}
+			strfix += ".";
+		}
+		
+		var leng = strfix.length;
+		strfix = strfix.substr(0, leng-1);
+		return strfix
+	}
+	function NamaTokoh(){
+		var Tokoh = ["Galih", "Endah", "Syauqi", "Kayyisah", "Fadly", "Dyah", "Wurry", "Uyi", "Imi", "Ewi", "Dina", "Reggy", "Abi"];
+		Tokoh = RandomMyArray(Tokoh);
+		return Tokoh;
+	}
+	function NamaTokohU(){
+		var Tokoh = ["Uti", "Untari", "Uci", "Uqi", "Ucha", "Uban", "Ubay", "Uyi", "Uwi", "Udin", "Uga", "Ucil", "Upin"];
+		Tokoh = RandomMyArray(Tokoh);
+		return Tokoh;
+	}
+	function NamaBuah(){
+		var Buah = ["Jeruk", "Apel", "Salak", "Jambu", "Timun", "Terong", "Kol", "Melon", "Mangga", "Buah Naga", "Nanas", "Alpukat", "Buah Pir"];
+		Buah = RandomMyArray(Buah);
+		return Buah;
+	}
+	function NamaEkskul(){
+		var Ekskul = ["berenang", "sepakbola", "pencak silat", "komputer", "bola voli", "bola basket", "panahan", "pramuka", "catur", "menari", "PMR"];
+		Ekskul = RandomMyArray(Ekskul);
+		return Ekskul;
+	}
+	function NamaDaerah(){
+		var Daerah = ["Bali", "Lombok", "Makassar", "Irian Jaya", "Jakarta", "Yogyakarta", "Padang", "Palembang", "Cirebon", "Bandung", "Surabaya"];
+		Daerah = RandomMyArray(Daerah);
+		return Daerah;
+	}
+	function NamaBilangan(){
+		var Bilangan = ["nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh"];
+		//Ekskul = RandomMyArray(Ekskul);
+		return Bilangan;
 	}
 	function BreakToTitikKoma(arr){
 		var titikkoma = "";
@@ -112,7 +219,6 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 				ArSoal.push(infix);
 			}
 		}
-		
 		ArBenar = [ArSoal[0],ArSoal[1],ArSoal[2],ArSoal[3]];
 		//ArBenar.sort(function(a, b){return b-a}); // besar ke kecil
 		ArBenar.sort(function(a, b){return a-b}); // kecil ke besar
@@ -138,6 +244,38 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(i<arr.length-1)	str += " , ";
 		}
 		return str;
+	}
+	function AngkaKeNama(ar){
+		var depan,tengah,akhir
+		var mm,nn,mmcvtr,nncvrt
+		var belas = ["sepuluh","sebelas","dua belas","tiga belas","empat belas","lima belas","enam belas","tujuh belas","delapan belas","sembilan belas"];
+		var angka = ["","satu","dua","tiga","empat","lima","enam","tujuh","delapan","sembilan","sepuluh"];
+		
+		// depan
+		if(ar[0]==1)		depan = "seribu";
+		else				depan = angka[ar[0]]+" ribu";
+		
+		// tengah
+		if(ar[1]==1)	tengah = "seratus";
+		else			tengah = angka[ar[1]]+" ratus";
+		
+		// belakang
+		if(ar[2]==1){
+			nn = ar[2]*10+ar[3]
+			nncvrt = nn-10;
+			belakang = belas[nncvrt];
+		}else{
+			mm = ar[2];
+			nn = ar[3];
+			mmcvrt = mm;
+			nncvrt = nn;
+			belakang = angka[mmcvrt]+" puluh "+angka[nncvrt];
+			if(nn==0)	belakang = angka[mmcvrt]+" puluh";
+			if(mm==0)	belakang = angka[nncvrt];
+			if(mm==0 && nn==0) belakang="";
+		}
+		var bFix = depan+" "+tengah+" "+belakang;
+		return bFix;
 	}
 	function MyBilanganCacah1(){
 		var a = Create4Urut(true);
@@ -825,110 +963,6 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		return 0;
 	}
-	function NoJawabanBenar(Arr, jwb){
-		for (var i=0; i<Arr.length; i++){
-			if (Arr[i]==jwb){
-				return i;
-				break;
-			}
-		}
-	}
-	function GetABCD(no){
-		var ABCD = ["A","B","C","D"]
-		return ABCD[no]
-	}
-	function StringMinus(ff){
-		var strff = ""+ff;
-		const gg = strff.split("-");
-		var fix = gg[0];
-		for(i=1;i<gg.length;i++){
-			fix+="–"+gg[i];
-		}
-		return fix;
-	}
-	function SplitString(ff){
-		var gg = new Array();
-		var strff = ""+ff;
-		var len = strff.length;
-		for (var i=0; i<len; i++){
-			gg.push(strff.substr(i,1));
-		}
-		
-		return gg;
-	}
-	function StringRibuan(str){
-		var strfix = "";
-		var arfix = new Array();
-		var StrArray = SplitString(str);
-		
-		for (var i=0; i<StrArray.length; i++){
-			arfix.push(StrArray[i]);
-		}
-		
-		var ct = 0;
-		var m = 0;
-		var n = 0;
-		var ctmax = StrArray.length;
-		var arct = new Array();
-		for (i=StrArray.length-1; i>=0; i--){
-			ct++;
-			ctmax--;
-			if(ct==3){
-				ct = 0;
-				m++;
-				arct.push(3);
-			}
-		}
-		var n = StrArray.length - 3*arct.length;
-		
-		var iter=-1;
-		strfix="";
-		for (var i=0; i<n; i++){
-			iter++;
-			strfix += arfix[iter];
-		}
-		if (n>0)
-			strfix +=  ".";
-		for (var i=0; i<m; i++){
-			for (j=0; j<3; j++){
-				iter++;
-				strfix += arfix[iter];
-			}
-			strfix += ".";
-		}
-		var leng = strfix.length;
-		strfix = strfix.substr(0, leng-1);
-		return strfix
-	}
-	function NamaTokoh(){
-		var Tokoh = ["Galih", "Endah", "Syauqi", "Kayyisah", "Fadly", "Dyah", "Wurry", "Uyi", "Imi", "Ewi", "Dina", "Reggy", "Abi"];
-		Tokoh = RandomMyArray(Tokoh);
-		return Tokoh;
-	}
-	function NamaTokohU(){
-		var Tokoh = ["Uti", "Untari", "Uci", "Uqi", "Ucha", "Uban", "Ubay", "Uyi", "Uwi", "Udin", "Uga", "Ucil", "Upin"];
-		Tokoh = RandomMyArray(Tokoh);
-		return Tokoh;
-	}
-	function NamaBuah(){
-		var Buah = ["Jeruk", "Apel", "Salak", "Jambu", "Timun", "Terong", "Kol", "Melon", "Mangga", "Buah Naga", "Nanas", "Alpukat", "Buah Pir"];
-		Buah = RandomMyArray(Buah);
-		return Buah;
-	}
-	function NamaEkskul(){
-		var Ekskul = ["berenang", "sepakbola", "pencak silat", "komputer", "bola voli", "bola basket", "panahan", "pramuka", "catur", "menari", "PMR"];
-		Ekskul = RandomMyArray(Ekskul);
-		return Ekskul;
-	}
-	function NamaTim(){
-		var Tim = ["Real Madrid", "Barcelona", "Villareal", "Real Betis"];
-		Tim = RandomMyArray(Tim);
-		return Tim;
-	}
-	function NamaBilangan(){
-		var Bilangan = ["nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh"];
-		return Bilangan;
-	}
 	function GetSoal1(){
 		const Aljabar = MyBilanganCacah1();
 		var ArSisi=Aljabar[0];
@@ -946,18 +980,18 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
 		Ar[0] = Array2String(Ar[0]);
 		Ar[1] = Array2String(Ar[1]);
 		Ar[2] = Array2String(Ar[2]);
-		Ar[3] = Array2String(Ar[3]);
+		//Ar[3] = Array2String(Ar[3]);
 		
 		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar))
@@ -969,7 +1003,7 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var benar=Aljabar[1];
 		var arrSalah=Aljabar[2];
 		
-		const DrawPGL = GambarBilanganCacah2(canv,ArSisi);
+		const DrawBilangan = GambarBilanganCacah2(canv,ArSisi);
 		var ss
 		
 		ss = "Tanda yang tepat untuk melengkapi kalimat di atas adalah ...";
@@ -979,13 +1013,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1007,18 +1041,18 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
 		Ar[0] = StringRibuan(Ar[0]);
 		Ar[1] = StringRibuan(Ar[1]);
 		Ar[2] = StringRibuan(Ar[2]);
-		Ar[3] = StringRibuan(Ar[3]);
+		//Ar[3] = StringRibuan(Ar[3]);
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1039,13 +1073,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1067,13 +1101,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1095,13 +1129,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1122,13 +1156,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1150,13 +1184,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1178,13 +1212,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1205,13 +1239,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1233,13 +1267,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1250,7 +1284,7 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var ArSisi=Aljabar[0];
 		var benar=Aljabar[1];
 		var arrSalah=Aljabar[2];
-		const DrawPGL = GambarBilanganCacah12(canv,ArSisi);
+		const DrawBilangan = GambarBilanganCacah12(canv,ArSisi);
 		var Nama = NamaTokoh();
 		var ss
 		
@@ -1261,13 +1295,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1279,7 +1313,7 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var benar=Aljabar[1];
 		var arrSalah=Aljabar[2];
 		
-		const DrawPGL = GambarBilanganCacah13(canv,ArSisi);
+		const DrawBilangan = GambarBilanganCacah13(canv,ArSisi);
 		var Nama = NamaTokoh();
 		var ss
 		
@@ -1290,13 +1324,13 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[0] = benar;
 		Ar[1] = arrSalah[0];
 		Ar[2] = arrSalah[1];
-		Ar[3] = arrSalah[2];
+		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";//D. "+Ar[3]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 

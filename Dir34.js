@@ -889,11 +889,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -916,11 +916,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -944,12 +944,12 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
 		//textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>D. "+Ar[3]+"<br>";
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -972,11 +972,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -999,11 +999,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1026,11 +1026,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1079,11 +1079,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1106,11 +1106,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1133,11 +1133,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1161,11 +1161,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1];
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1216,11 +1216,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1]+"\u{00B0}";
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
@@ -1243,11 +1243,11 @@ function Print34(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar[2] = arrSalah[1]+"\u{00B0}";
 		//Ar[3] = arrSalah[2];
 		
-		jawab = Ar[0];
+		var jawab = Ar[0];
 		Ar = RandomMyArray(Ar);
-		noBenar = NoJawabanBenar(Ar, jawab);
+		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"<br>B. "+Ar[1]+"<br>C. "+Ar[2]+"<br>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar)); 
