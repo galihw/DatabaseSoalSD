@@ -33,7 +33,7 @@ function Print32(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		min = ar[0];
 		max = ar[0];
-		for(i=0;i<ar.length;i++){
+		for(var i=0;i<ar.length;i++){
 			min = Math.min(min,ar[i]);
 			max = Math.max(max,ar[i]);
 		}
@@ -44,7 +44,7 @@ function Print32(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		do {
 			iter++;
 			ff = 1;
-			for(i=0;i<ar.length;i++){
+			for(var i=0;i<ar.length;i++){
 				f[i] = Mods(ar[i],iter)==0;
 				ff *= f[i];
 			}

@@ -189,7 +189,7 @@ function Print52(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		var min = ar[0];
 		var max = ar[0];
-		for(i=0;i<ar.length;i++){
+		for(var i=0;i<ar.length;i++){
 			min = Math.min(min,ar[i]);
 			max = Math.max(max,ar[i]);
 		}
@@ -200,7 +200,7 @@ function Print52(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		do {
 			iter++;
 			ff = 1;
-			for(i=0;i<ar.length;i++){
+			for(var i=0;i<ar.length;i++){
 				f[i] = Mods(iter,ar[i])!=0;
 				ff += f[i];
 			}

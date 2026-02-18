@@ -33,7 +33,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		min = ar[0];
 		max = ar[0];
-		for(i=0;i<ar.length;i++){
+		for(var i=0;i<ar.length;i++){
 			min = Math.min(min,ar[i]);
 			max = Math.max(max,ar[i]);
 		}
@@ -44,7 +44,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		do {
 			iter++;
 			ff = 1;
-			for(i=0;i<ar.length;i++){
+			for(var i=0;i<ar.length;i++){
 				f[i] = Mods(ar[i],iter)==0;
 				ff *= f[i];
 			}
@@ -62,7 +62,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var strff = ""+ff;
 		var len = strff.length;
 		var gg = "";
-		for (i=0;i<len;i++){
+		for (var i=0;i<len;i++){
 			if(strff.substr(i,1)==".")	gg += ",";
 			else 						gg += strff.substr(i,1);
 		}
@@ -149,7 +149,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var strff = ""+ff;
 		var len = strff.length;
 		var i;
-		for (i=0; i<len; i++){
+		for (var i=0; i<len; i++){
 			gg.push(1*strff.substr(i,1));
 		}
 		
