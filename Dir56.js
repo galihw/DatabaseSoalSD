@@ -1470,7 +1470,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 200;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1481,7 +1481,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 200;
 		cc1.height = 400;
 		const DrawSudut5 = GambarSudut5(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1492,7 +1492,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 400;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1503,7 +1503,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 160;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1514,7 +1514,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 127;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1525,7 +1525,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 143;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1536,7 +1536,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 189;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1547,7 +1547,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 158;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1558,7 +1558,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 157;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1569,7 +1569,7 @@ function Print56(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 214;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

@@ -1389,7 +1389,7 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 130;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1400,7 +1400,7 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 391;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1411,7 +1411,7 @@ function Print31(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 391;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

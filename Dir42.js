@@ -3,16 +3,16 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	function RandomMyArray(Arr){
 		/* ---- RANDOM isi Array ---- */
 		/* Global */
-		for (i=0; i<Arr.length; i++){
-			r = Math.floor(Math.random() * Arr.length);
-			a = Arr[i];
+		for (var i=0; i<Arr.length; i++){
+			var r = Math.floor(Math.random() * Arr.length);
+			var a = Arr[i];
 			Arr[i] = Arr[r];
 			Arr[r] = a;
 		}
 		return Arr
 	}
 	function RandomAngkaAtoB(a,b){   
-		r = a+Math.ceil(Math.random() * b);
+		var r = a+Math.ceil(Math.random() * b);
 		return r;
 	}
 	function Mods(m,n){
@@ -1177,7 +1177,6 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var ArSisi = [atot,btot,ctot];
 		var arrSalah = [];
 		
-		console.log(ArSalah)
 		
 		var benar = abctot;
 		arrSalah = ArSalah;
@@ -1379,7 +1378,6 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			if(inside==1){
 				var str0 = arrss[0].length;
 				var str1 = arrss[1].length;
-				console.log(str0,str1)
 				ctx.drawImage(base1_image, 85+ (str0-39)*8, 46*0-7,base1_image.width, base1_image.height);
 				ctx.drawImage(base1_image, 75+ (str1-31)*8, 46*1-8,base1_image.width, base1_image.height);
 				ctx.font = "16px Times New Roman";
@@ -2319,7 +2317,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	function NoJawabanBenar(Arr, jwb){
-		for (i=0; i<Arr.length; i++){
+		for (var i=0; i<Arr.length; i++){
 			if (Arr[i]==jwb){
 				return i;
 				break;
@@ -2334,7 +2332,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var strff = ""+ff;
 		const gg = strff.split("-");
 		var fix = gg[0];
-		for(i=1;i<gg.length;i++){
+		for(var i=1;i<gg.length;i++){
 			fix+="–"+gg[i];
 		}
 		return fix;
@@ -2344,7 +2342,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var strff = ""+ff;
 		var len = strff.length;
 		var i;
-		for (i=0; i<len; i++){
+		for (var i=0; i<len; i++){
 			gg.push(strff.substr(i,1));
 		}
 		
@@ -2356,7 +2354,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var StrArray = SplitString(str);
 		var i;
 		
-		for (i=0; i<StrArray.length; i++){
+		for (var i=0; i<StrArray.length; i++){
 			arfix.push(StrArray[i]);
 		}
 		
@@ -2365,7 +2363,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var n = 0;
 		var ctmax = StrArray.length;
 		var arct = new Array();
-		for (i=StrArray.length-1; i>=0; i--){
+		for (var i=StrArray.length-1; i>=0; i--){
 			ct++;
 			ctmax--;
 			if(ct==3){
@@ -2379,14 +2377,14 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		var iter=-1;
 		strfix="";
-		for (i=0; i<n; i++){
+		for (var i=0; i<n; i++){
 			iter++;
 			strfix += arfix[iter];
 		}
 		if (n>0)
 			strfix +=  ".";
-		for (i=0; i<m; i++){
-			for (j=0; j<3; j++){
+		for (var i=0; i<m; i++){
+			for (var j=0; j<3; j++){
 				iter++;
 				strfix += arfix[iter];
 			}
@@ -3174,7 +3172,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 30;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -3185,7 +3183,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -3196,7 +3194,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 100;
 		cc1.height = 184;
 		const DrawPecahan4 = GambarBilanganPecahan4(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -3211,7 +3209,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id);
 		const DrawPecahan5 = GambarBilanganPecahan5(cc2.id,ss[2]);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==6){
@@ -3221,7 +3219,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 100;
 		cc1.height = 184;
 		const DrawPecahan6 = GambarBilanganPecahan6(cc1.id,ss[2]);		
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -3235,7 +3233,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<br>Pecahan yang tepat untuk mengisi titik-titik di atas agar menjadi urutan yang tepat adalah ...<br>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==8){
@@ -3245,7 +3243,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -3258,7 +3256,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<br>Pecahan-pecahan di atas jika ditulis secara urut dari yang terkecil menjadi ...<br>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==10){
@@ -3270,7 +3268,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==11){
@@ -3282,7 +3280,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p></p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==12){
@@ -3293,7 +3291,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 138;
 		const DrawPecahan12 = GambarBilanganPecahan12(cc1.id,ss[2][1],ss[3]);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -3306,7 +3304,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>Hasil dari penjumlahan pecahan di atas adalah ...</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==14){
@@ -3318,7 +3316,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>Hasil dari penjumlahan pecahan di atas adalah ...</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==15){
@@ -3330,7 +3328,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>Hasil dari pengurangan pecahan di atas adalah ...</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==16){
@@ -3342,7 +3340,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>Hasil dari pengurangan pecahan di atas adalah ...</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==17){
@@ -3354,7 +3352,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>Hasil dari pengurangan pecahan di atas adalah ...</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==18){
@@ -3368,7 +3366,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		const DrawPecahan18awal = GambarBilanganPecahan18awal(cc1.id,ss[2][1],ss[3]);
 		const DrawPecahan18 = GambarBilanganPecahan18(cc2.id,ss[2]);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==19){
@@ -3380,7 +3378,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		dd2.innerHTML+="<p>Berapakah sisa uang "+ss[2][1][3]+" sekarang?</p>";
 		const DrawPecahan19a = GambarBilanganPecahan19(cc1.id,[ss[2][1][1],ss[2][1][2]],["Sebanyak","bagian dari uangnya dipakai untuk membeli barang."]);
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 	}else if(no==20){
@@ -3390,7 +3388,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 30;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -3401,7 +3399,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 100;
 		cc1.height = 184;
 		const DrawPecahan22 = GambarBilanganPecahan22(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -3414,7 +3412,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		dd2.innerHTML+="<p>Total berat belanjaan Bu "+ss[2][1][0]+" adalah ...</p>";
 		const DrawPecahan23awal = GambarBilanganPecahan23(cc1.id,ss[2][1],ss[3]);
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 	}else if(no==24){
@@ -3424,7 +3422,7 @@ function Print42(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 42;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

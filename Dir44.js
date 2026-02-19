@@ -1966,7 +1966,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 762;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1977,7 +1977,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 164;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1988,7 +1988,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 245;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1999,7 +1999,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 163;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2013,7 +2013,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p></p>";
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==7){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut! </p>";
@@ -2022,7 +2022,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 247;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2033,7 +2033,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 247;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2044,7 +2044,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 300;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2055,7 +2055,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 250;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2066,7 +2066,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 180;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2077,7 +2077,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 250;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2088,7 +2088,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 300;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2099,7 +2099,7 @@ function Print44(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 300;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

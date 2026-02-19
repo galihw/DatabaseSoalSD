@@ -289,7 +289,7 @@ function Print52(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	function isPrime(n){
 		var ct = 0;
 		var i
-		for(i=1;i<=n;i++){
+		for(var i=1;i<=n;i++){
 			if(Mods(n,i)==0) ct++;
 		}
 		return ct==2;
@@ -297,7 +297,7 @@ function Print52(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	function BilPrimaAntara(a,b){
 		var bil = [];
 		var i
-		for(i=a+1;i<b;i++)	if(isPrime(i))	bil.push(i);
+		for(var i=a+1;i<b;i++)	if(isPrime(i))	bil.push(i);
 		return bil;
 	}
 	function BilPrimaMulaiDanN(a,n){

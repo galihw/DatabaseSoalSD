@@ -857,7 +857,7 @@ function Print32(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var n = 0;
 		var ctmax = StrArray.length;
 		var arct = new Array();
-		for (i=StrArray.length-1; i>=0; i--){
+		for (var i=StrArray.length-1; i>=0; i--){
 			ct++;
 			ctmax--;
 			if(ct==3){
@@ -1309,7 +1309,7 @@ function Print32(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 313;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1320,7 +1320,7 @@ function Print32(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 313;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1331,7 +1331,7 @@ function Print32(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 313;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1342,7 +1342,7 @@ function Print32(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 313;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

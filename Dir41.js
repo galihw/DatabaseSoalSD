@@ -1756,7 +1756,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var Nama = NamaTokoh();
 		var ss
 		
-		ss = "17. "+ArSisi[0]+" \u00D7 "+ArSisi[1]+" = ...";
+		ss = ""+ArSisi[0]+" \u00D7 "+ArSisi[1]+" = ...";
 		
 		var Ar = [];
 		// jawaban
@@ -1837,7 +1837,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 230;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1848,7 +1848,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 200;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1859,7 +1859,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 130;
 		ss = namefunc[no-1](cc1.id);
 		dd4.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1870,7 +1870,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 130;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1881,7 +1881,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 152;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1892,7 +1892,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 130;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1907,7 +1907,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc3.height = 100;
 		ss = namefunc[no-1](cc1.id,cc2.id,cc3.id);
 		dd4.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 	}else if(no==16){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut ini! </p>";
@@ -1916,7 +1916,7 @@ function Print41(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 270;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

@@ -1352,7 +1352,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 70;
 		cc1.height = 160;
 		const DrawPeluang1 = GambarPeluang1(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1364,7 +1364,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 70;
 		cc1.height = 160;
 		const DrawPeluang2 = GambarPeluang2(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1376,7 +1376,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 70;
 		cc1.height = 160;
 		const DrawPeluang3 = GambarPeluang3(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1388,7 +1388,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 70;
 		cc1.height = 160;
 		const DrawPeluang4 = GambarPeluang4(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1400,7 +1400,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 70;
 		cc1.height = 160;
 		const DrawPeluang5 = GambarPeluang5(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1412,7 +1412,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 50;
 		cc1.height = 140;
 		const DrawPeluang7 = GambarPeluang7(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1424,7 +1424,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 70;
 		cc1.height = 160; 
 		const DrawPeluang8 = GambarPeluang8(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1436,7 +1436,7 @@ function Print64(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 70;
 		cc1.height = 160; 
 		const DrawPeluang10 = GambarPeluang10(cc1.id,ss[1]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1][0];
+		dd4.innerHTML+="Jawaban : "+ss[1][0];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);

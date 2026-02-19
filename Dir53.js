@@ -1841,7 +1841,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		return 0;
 	}
 	function NoJawabanBenar(Arr, jwb){
-		for (i=0; i<Arr.length; i++){
+		for (var i=0; i<Arr.length; i++){
 			if (Arr[i]==jwb){
 				return i;
 				break;
@@ -1856,7 +1856,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var strff = ""+ff;
 		const gg = strff.split("-");
 		var fix = gg[0];
-		for(i=1;i<gg.length;i++){
+		for(var i=1;i<gg.length;i++){
 			fix+="–"+gg[i];
 		}
 		return fix;
@@ -1866,7 +1866,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var strff = ""+ff;
 		var len = strff.length;
 		var i;
-		for (i=0; i<len; i++){
+		for (var i=0; i<len; i++){
 			gg.push(strff.substr(i,1));
 		}
 		
@@ -1878,7 +1878,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var StrArray = SplitString(str);
 		var i;
 		
-		for (i=0; i<StrArray.length; i++){
+		for (var i=0; i<StrArray.length; i++){
 			arfix.push(StrArray[i]);
 		}
 		
@@ -1887,7 +1887,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var n = 0;
 		var ctmax = StrArray.length;
 		var arct = new Array();
-		for (i=StrArray.length-1; i>=0; i--){
+		for (var i=StrArray.length-1; i>=0; i--){
 			ct++;
 			ctmax--;
 			if(ct==3){
@@ -1901,14 +1901,14 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		var iter=-1;
 		strfix="";
-		for (i=0; i<n; i++){
+		for (var i=0; i<n; i++){
 			iter++;
 			strfix += arfix[iter];
 		}
 		if (n>0)
 			strfix +=  ".";
-		for (i=0; i<m; i++){
-			for (j=0; j<3; j++){
+		for (var i=0; i<m; i++){
+			for (var j=0; j<3; j++){
 				iter++;
 				strfix += arfix[iter];
 			}
@@ -2601,7 +2601,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2612,7 +2612,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 50;
 		cc1.height = 184;
 		const DrawPecahan2 = GambarBilanganPecahan2(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2624,7 +2624,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 50;
 		cc1.height = 184;
 		const DrawPecahan2 = GambarBilanganPecahan2(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2638,7 +2638,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==5){
@@ -2648,7 +2648,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2659,7 +2659,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 100;
 		cc1.height = 184;
 		const DrawPecahan8 = GambarBilanganPecahan8(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2673,7 +2673,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==10){
@@ -2685,7 +2685,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==11){
@@ -2700,7 +2700,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		const DrawPecahan11awal = GambarBilanganPecahan11awal(cc1.id,ss[2],ss[3]);
 		const DrawPecahan11 = GambarBilanganPecahan11(cc2.id,ss[2],ss[3]);
 		dd2.innerHTML+="<br>Maka jumlah tali "+Nama[0]+" dan "+Nama[1]+" jika ditambahkan menjadi ....<br>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==12){
@@ -2712,7 +2712,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==13){
@@ -2728,7 +2728,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		const DrawPecahan13awal = GambarBilanganPecahan13awal(cc1.id,ss[2],ss[3]);
 		const DrawPecahan13 = GambarBilanganPecahan13(cc2.id,ss[2],ss[3]);
 		dd2.innerHTML+="<p>Sekarang sisa pita "+Nama[0]+" menjadi ....</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==14){
@@ -2740,7 +2740,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==15){
@@ -2752,7 +2752,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc2.height = 184;
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==16){
@@ -2768,7 +2768,7 @@ function Print53(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 92;
 		const DrawPecahan16awal = GambarBilanganPecahan16(cc1.id,ss[2],[str1,str2]);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

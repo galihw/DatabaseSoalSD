@@ -2328,7 +2328,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p></p>";
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==2){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
@@ -2340,7 +2340,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p></p>";
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==3){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
@@ -2352,7 +2352,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p></p>";
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==4){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
@@ -2364,7 +2364,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p></p>";
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==7){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
@@ -2373,7 +2373,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2387,7 +2387,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p></p>";
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==10){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Pilihlah jawaban yang tepat!</p>";
@@ -2396,7 +2396,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 35;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2408,7 +2408,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 35;
 		const DrawPecahanAwal11 = GambarPecahanDesimal11(cc1.id,ss[2],"Ternyata ember tersebut terguling dan air dalam ember tinggal","liter.");
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2419,7 +2419,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 80;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2434,7 +2434,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var str3 = "untuk biaya pendidikan anak-anaknya,";
 		const DrawPecahanAwal14 = GambarPecahanDesimal14(cc1.id,ss[2],str1,str2,str3);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2445,7 +2445,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 80;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2456,7 +2456,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 40;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2467,7 +2467,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 40;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);
@@ -2479,7 +2479,7 @@ function Print61(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 160;
 		const DrawPecahan20 = GambarPecahanDesimal20(cc1.id,ss[2]);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(dd3);
 		hidingElemen(cc2);
 		hidingElemen(cc3);

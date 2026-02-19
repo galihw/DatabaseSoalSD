@@ -2013,7 +2013,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 60;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2024,7 +2024,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 60;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2035,7 +2035,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 177;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2049,7 +2049,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ss = namefunc[no-1](cc1.id,cc2.id);
 		dd2.innerHTML+="<p>Buatlah tabel berdasarkan data berat badan 20 balita!</p>";
 		dd3.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==5){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Berikut data berat badan 20 balita dalam kg: </p>";
@@ -2058,7 +2058,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 80;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2069,7 +2069,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 80;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2080,7 +2080,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 177;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2091,7 +2091,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 177;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2102,7 +2102,7 @@ function Print35(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 240;
 		cc1.height = 534;
 		const DrawPenyajian12 = GambarPenyajian12(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
